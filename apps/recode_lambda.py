@@ -8,7 +8,7 @@ file_path = os.path.abspath('..')
 params = {}
 
 print('loading conf...')
-with f = open(file_path + '/tmp/train.conf', 'r'):
+with open(file_path + '/tmp/train.conf', 'r') as f:
     for line in f.readlines():
         if line[0] = '#':
             continue
