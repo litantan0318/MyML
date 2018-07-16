@@ -10,7 +10,7 @@ params = {}
 print('loading conf...')
 with open(file_path + '/tmp/train.conf', 'r') as f:
     for line in f.readlines():
-        if line[0] = '#':
+        if line[0] == '#':
             continue
         terms = line.split("\s+")
         if len(terms) == 3:
