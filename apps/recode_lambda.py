@@ -4,7 +4,7 @@ import lightgbm as lgb
 import pandas as pd
 import os
 
-file_path = os.path.abspath('..')
+file_path = os.path.abspath('.')
 params = {}
 
 print('loading conf...')
