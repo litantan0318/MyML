@@ -12,10 +12,9 @@ with open(file_path + '/tmp/train.conf', 'r') as f:
     for line in f.readlines():
         if line[0] == '#':
             continue
-        terms = line.split("\s+")
-        if len(terms) == 3:
-            params[terms[0]] = terms[2]
-            print("key %s , value %s" % (terms[0], terms[2]))
+        terms = line.split(" ")
+        params[terms[0]] = terms[2]
+        print("key %s , value %s" % (terms[0], terms[2]))
 
 
 # # load or create your dataset
