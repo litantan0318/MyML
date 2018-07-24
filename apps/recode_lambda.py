@@ -18,11 +18,12 @@ with open(file_path + '/tmp/train.conf', 'r') as f:
 
 
 # load or create your dataset
-print('Load data...')
-td_train = pd.read_csv(file_path + '/tmp/train_data', header=None, sep=',').values
-td_query = pd.read_csv(file_path + '/tmp/train_data.query', header=None, sep=',').values
-vd_train = pd.read_csv(file_path + '/tmp/vali_data', header=None, sep=',').values
-vd_query = pd.read_csv(file_path + '/tmp/vali_data.query', header=None, sep=',').values
+# print('Load data...')
+# td_train = pd.read_csv(file_path + '/tmp/train_data', header=None, sep=',').values
+# td_query = pd.read_csv(file_path + '/tmp/train_data.query', header=None, sep=',').values
+# vd_train = pd.read_csv(file_path + '/tmp/vali_data', header=None, sep=',').values
+# vd_query = pd.read_csv(file_path + '/tmp/vali_data.query', header=None, sep=',').values
+gbm = lgb.booster(model_file=file_path + '/tmp/model.txt')
 
 
 # create dataset for lightgbm
